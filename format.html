@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Form Sample</title>
+    <link rel="stylesheet" href="normal.css" />
+    <link rel="stylesheet" href="mycss.css" />
+<!--[if lt IE 8]>
+    <style>
+        legend {
+            display: block;
+            padding: 0;
+            padding-top: 30px;
+            font-weight: bold;
+            font-size: 1.25em;
+            color: #FFD98D;
+            margin: 0 auto;
+        }
+    </style>
+<![endif]-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+</head>
+<body>
+
+<div class="nav">
+    <ul>
+        <li id="activetab" title="Login Info">Step 1</li>
+        <li title="Other Info">Step 2</li>
+        <li title="Comments">Step 3</li>
+    </ul>
+</div>
+
+<form id="myform" class="group" action="thanks.html" method="POST">
+  <div id="message"></div>
+    <fieldset id="login" title="Login Info">
+        <legend>Login Info</legend>
+        <ol>
+            <li>
+                <label for="myname">Name *</label>
+                <input type="text" name="myname" id="myname" title="Please enter your name"  placeholder="Last, First" />
+            </li>
+            <li>
+                <label for="myemail">Email *</label>
+                <input type="email" name="myemail" id="myemail"   />
+            </li>
+            <li>
+                <label for="mypassword">Password</label>
+                <input type="password" name="mypassword" id="mypassword" />
+            </li>
+        </ol>
+        <div class="buttonnav next">next</div>
+    </fieldset>
+    <fieldset id="other" class="hidden" title="Other Info">
+        <legend>Other</legend>
+        <ol>
+            <li>
+                <label for="myurl">Website *</label>
+                <input type="url" name="myurl" id="myurl"  />
+            </li>
+            <li>
+                <label for="mytelephone">Telephone</label>
+                <input type="tel" name="mytelephone" id="mytelephone" />
+            </li>
+            <li class="singleline">
+                <input type="checkbox" id="subscribeitem" name="subscribe" CHECKED value="yes" />
+                <label for="subscribeitem">Subscribe to our mailing list?</label>
+            </li>
+            <li>
+                <label for="reference">How did you hear about us?</label>
+                <select name="reference" id="reference">
+                    <option>Choose...</option>
+                    <option value="friend">A friend</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="twitter">Twitter</option>
+                </select>
+            </li>
+        </ol>
+        <div class="buttonnav prev">prev</div>
+        <div class="buttonnav next">next</div>
+    </fieldset>
+    <fieldset id="comments"  class="hidden" title="Comments">
+    <legend>Comments</legend>
+        <ol>
+            <li>
+                <div class="grouphead">Request Type</div>
+                <ol>
+                    <li>
+                        <input type="radio" name="requesttype" value="question" id="questionitem" />
+                        <label for="questionitem">Question</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="requesttype" value="comment" id="commentitem" />
+                        <label for="commentitem">Comment</label>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <label for="mycomments">Comment</label>
+                <textarea name="mycomments" id="mycomments"></textarea>
+            </li>
+        </ol>
+        <div class="buttonnav prev">prev</div>
+        <button type="submit">send</button>
+    </fieldset>
+</form>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="myscript.js"></script>
+</body>
+
+</html>
